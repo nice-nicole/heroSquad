@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>{{#block "title"}}Hero Squad{{/block}}</title>
+
+   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+   <link rel='stylesheet' href='App.css'>
+   <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+<ul class="nav nav-tabs">
+   <li role="presentation" class="active"><a href="#">Home</a></li>
+{{!--    <li role="presentation"><a href="/posts">See All Posts</a></li> --}}
+   <li role="presentation"><a href="/heroes/new">Add a New Hero</a></li>
+   <li role="presentation"><a href="/squads/new">Add a New Squad</a></li>
+</ul>
+<div class="container">
+   <!--begin main template-->
+   <div id="welcome">
+       <h1>Welcome to my Hero Squad app</h1>
+
+   <div class= "btn-links">
+{{!--    <a href="/heroes/new" class="list-group-item list-group-item-action-warning">Add a new Hero</a> --}}
+{{!--    <a href="/squads/new" class="list-group-item list-group-item-action">Add a new Squad</a> --}}
+   </div>
+    </div>
+
+   <div class="col-md-12">
+       {{#block "content"}}
+       {{/block}}
+
+   </div>
+</div>
+<!--end main template-->
+{{#block "footer"}}
+   <footer class="footer">
+       <div class="container">
+{{!--            <p class="text-muted"><a href="/heroes/delete">DELETE ALL Heroes </a></p> --}}
+       </div>
+   </footer>
+   </body>
+   </html>
+{{/block}}
